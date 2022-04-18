@@ -25,7 +25,7 @@ document.getElementById("ingresar").onclick = function(){
   var clave = document.getElementById('password').value;
 
   var urllogin = 'https://api-parcial.crangarita.repl.co/login'
-  var data = {user:username, password:clave};
+  var data = {codigo:username, clave:clave};
 
   fetch(urllogin,{
     method: 'POST',
@@ -38,8 +38,8 @@ document.getElementById("ingresar").onclick = function(){
   .then(response => {
                         if(response.login){
                           console.log('Success:', response);
-                          localStorage.setItem("user", response.user);
-                          localStorage.setItem("name", response.name);
+                          localStorage.setItem("codigo", response.codigo);
+                          localStorage.setItem("clave", response.clave);
                           window.location.href="notas.html";
                         }else{
                           alert("Los datos son invalidos");
