@@ -44,7 +44,7 @@
 
 .boton{
   font-size: 16px;
-	border-radius: 10px;
+	border-radius: 0 0 0 15px;
   padding: 10px 30px;
   max-width:275px
 	width: 50%;
